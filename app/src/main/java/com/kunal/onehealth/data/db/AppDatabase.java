@@ -1,13 +1,11 @@
 package com.kunal.onehealth.data.db;
 
-
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
+import com.kunal.onehealth.data.dao.MedicineDao;
+import com.kunal.onehealth.data.model.Medicine;
 
-
-// Step 1: Keep it empty for now
-@Database(entities = {TestEntity.class}, version = 1, exportSchema = false)
+@Database(entities = {Medicine.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
-
-// Future DAOs will go here
+    public abstract MedicineDao medicineDao();
 }

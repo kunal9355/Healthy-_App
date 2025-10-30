@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33513695963",
+    "project_id": "healtyapp-a55b3",
+    "storage_bucket": "healtyapp-a55b3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33513695963:android:49131c5d30e73bbffd7afe",
+        "android_client_info": {
+          "package_name": "com.kunal.onehealth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlgEzaP6xcXsohSJ5kMLlOFksLXFyePTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.kunal.onehealth" />
+                  <option name="mobileSdkAppId" value="1:33513695963:android:49131c5d30e73bbffd7afe" />
+                  <option name="projectId" value="healtyapp-a55b3" />
+                  <option name="projectNumber" value="33513695963" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
