@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/onboard3"
+        android:contentDescription="onboarding image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitor Mood &amp; Wellbeing 💖"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:textColor="#000"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/btnBack3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="⬅ Back"/>
+
+        <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Get Started ✅"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -22,12 +22,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Dosage (e.g., 500mg)" />
-
         <EditText
             android:id="@+id/etTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Time (e.g., 10:00 AM)" />
+            android:hint="Select Time"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"
+            android:drawableEnd="@drawable/ic_time" />
 
         <Button
             android:id="@+id/btnAdd"

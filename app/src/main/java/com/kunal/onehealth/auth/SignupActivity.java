@@ -2,6 +2,7 @@ package com.kunal.onehealth.auth;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.kunal.onehealth.R;
+import com.kunal.onehealth.ui.main.MainActivity;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -39,7 +41,9 @@ public class SignupActivity extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             Toast.makeText(this, "Signup Successful ✅", Toast.LENGTH_SHORT).show();
-                            finish(); // Wapas login screen pe chale jao
+                            startActivity(new Intent(SignupActivity.this, MainActivity.class));
+                            finish();
+                            // Wapas login screen pe chale jao
                         } else {
                             Toast.makeText(this, "Signup Failed ❌", Toast.LENGTH_SHORT).show();
                         }

@@ -1,5 +1,8 @@
 package com.kunal.onehealth.ui.main;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -41,6 +44,18 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, MedicineActivity.class);
             startActivity(intent);
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    "med_channel",
+                    "Medicine Reminder",
+                    NotificationManager.IMPORTANCE_HIGH
+            );
+            channel.setDescription("Reminders for your medicines");
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
 
 
 
