@@ -76,7 +76,7 @@ dependencies {
 
     implementation("androidx.room:room-runtime:2.7.0-alpha01")
     annotationProcessor("androidx.room:room-compiler:2.7.0-alpha01")
-
+    implementation("com.google.zxing:core:3.5.2")
 
 
 // (Optional) Room Kotlin Extensions and Coroutines support

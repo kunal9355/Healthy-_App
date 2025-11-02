@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kunal.onehealth.ui.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="com.kunal.onehealth.ui.qr.EmergencyQrFragment"
+        android:label="QR" />
+
+
+    <fragment
+        android:id="@+id/medicineFragment"
+        android:name="com.kunal.onehealth.ui.medicine.MedicineFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kunal.onehealth.ui.profile.ProfileFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.kunal.onehealth.ui.settings.SettingsFragment"
+        android:label="Settings" />
+</navigation>

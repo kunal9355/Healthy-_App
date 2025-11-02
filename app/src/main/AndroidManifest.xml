@@ -2,10 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- ✅ Permissions -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+
 
     <application
+
+
+
         android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,27 +24,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OneHealth">
+
+        <!-- 🟢 Launch Activity (Login Screen) -->
         <activity
             android:name=".auth.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- 🟡 Auth & Onboarding Screens -->
         <activity android:name=".auth.SignupActivity" />
-        <activity android:name=".ui.medicine.MedicineActivity" />
-        <activity  android:name=".ui.main.MainActivity" />
-
         <activity android:name=".ui.onboarding.Onboarding2Activity" />
         <activity android:name=".ui.onboarding.Onboarding3Activity" />
 
+        <!-- 🔵 Main Dashboard Activity -->
+        <activity android:name=".ui.main.HomeDashboardActivity" />
 
-        <receiver android:name=".receiver.MedicineReminderReceiver" />
+        <!-- 🔴 Medicine Reminder Activity -->
+        <activity android:name=".ui.medicine.MedicineActivity" />
 
-
+        <!-- 🔔 Broadcast Receiver for Medicine Notifications -->
+        <receiver android:name=".receiver.MedicineReminderReceiver"
+            android:exported="true"
+            android:enabled="true" />
 
     </application>
 

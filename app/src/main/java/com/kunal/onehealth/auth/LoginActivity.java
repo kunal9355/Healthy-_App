@@ -9,7 +9,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.kunal.onehealth.R;
-import com.kunal.onehealth.ui.main.MainActivity;
+import com.kunal.onehealth.ui.home.HomeFragment;
+import com.kunal.onehealth.ui.main.HomeDashboardActivity;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (auth.getCurrentUser() != null) {
             // User already logged in → go directly to MainActivity
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(new Intent(LoginActivity.this, HomeDashboardActivity.class));
             finish();
             return;
         }
@@ -61,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             Toast.makeText(this, "Login Successful ✅", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(this, MainActivity.class));
+                            startActivity(new Intent(this, HomeFragment.class));
                             finish();
                         } else {
                             Toast.makeText(this, "Login Failed ❌", Toast.LENGTH_SHORT).show();
